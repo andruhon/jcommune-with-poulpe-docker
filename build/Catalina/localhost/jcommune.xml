@@ -13,7 +13,7 @@
   <!-- SMTP server that's used to send mails to the end user (e.g. during registration) -->
   <!-- Please, don't use these credentials if possible (and don't use it for bad things ;)), -->
   <!-- but if you want just to quickly try the app or you're a part of dev team, feel free to use these credentials -->
-  <Environment name="SMTP_HOST" value="localhost" type="java.lang.String"/>
+  <Environment name="SMTP_HOST" value="host.docker.internal" type="java.lang.String"/>
   <!--for smtp default port value is 25, for smtps - 465-->
   <Environment name="SMTP_PORT" value="2500" type="java.lang.String"/>
   <Environment name="MAIL_USERNAME" value="example.smtp.jtalk@gmail.com" type="java.lang.String"/>
