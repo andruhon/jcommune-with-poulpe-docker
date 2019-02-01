@@ -1,0 +1,6 @@
+[submodule "jcommune"]
+	path = jcommune
+	url = git@github.com:jtalks-org/jcommune.git
+[submodule "poulpe"]
+	path = poulpe
+	url = git@github.com:jtalks-org/poulpe.git

@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile-app
+    ports:
+      - "8888:8080"
+    volumes:
+      - ./build/webapps/:/usr/local/tomcat/webapps
+      - ./build/Catalina/localhost/:/usr/local/tomcat/conf/Catalina/localhost
+  db:
+    build:
+      context: ./
+      dockerfile: Dockerfile-db
+    volumes:
+      - ./build/mysql/:/etc/mysql/conf.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=jtalks
+    #volumes:
+    #  - ./database:/docker-entrypoint-initdb.d
